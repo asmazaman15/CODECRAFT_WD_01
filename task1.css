@@ -1,0 +1,127 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #0f0f1a;
+    color: white;
+}
+
+/* Navbar Styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1f1f2e;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 100; */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #2b2b45;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+header.scrolled .logo {
+    color: rgb(233, 76, 110);
+}
+
+header.scrolled .nav-links a {
+    color: rgb(233, 76, 110);
+}
+
+header.scrolled .nav-links a:hover {
+    color: #fca311;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fca311;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fca311;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #fca311;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ffba4a;
+}
+
+/* Content Section */
+.content {
+    padding: 100px 40px;
+    background-color: #1f1f2e;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        background-color: #1f1f2e;
+        position: absolute;
+        top: 70px;
+        right: 40px;
+    }
+}
